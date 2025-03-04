@@ -82,13 +82,13 @@ def test_draw_pascal():
     except Exception as e:
         return f"Not OK ({str(e)})"
 
-results = {
-    "random_subset": test_random_subset(),
-    "random_bit_string": test_random_bit_string(),
-    "draw_pascal": test_draw_pascal()
-}
-
-print("Function Name            | Status")
-print("-------------------------|--------")
-for func_name, status in results.items():
-    print(f"{func_name:<25} | {status}")
+def test():
+    results = {
+        "random_subset": test_random_subset(),
+        "random_bit_string": test_random_bit_string(),
+        "draw_pascal": test_draw_pascal()
+    }
+    print("Function Name            | Status")
+    print("-------------------------|--------")
+    for func_name, status in results.items():
+        print(f"{func_name:<24} | {status}")
